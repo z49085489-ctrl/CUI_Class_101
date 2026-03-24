@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_ClickMe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,11 +44,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "N14312101-戴廣進";
             // 
+            // btn_ClickMe
+            // 
+            this.btn_ClickMe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_ClickMe.Font = new System.Drawing.Font("標楷體", 15F);
+            this.btn_ClickMe.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btn_ClickMe.Location = new System.Drawing.Point(40, 111);
+            this.btn_ClickMe.Name = "btn_ClickMe";
+            this.btn_ClickMe.Size = new System.Drawing.Size(208, 55);
+            this.btn_ClickMe.TabIndex = 1;
+            this.btn_ClickMe.Text = "按我一下";
+            this.btn_ClickMe.UseVisualStyleBackColor = false;
+            this.btn_ClickMe.Click += new System.EventHandler(this.bun_ClickMe_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_ClickMe);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -59,6 +74,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_ClickMe;
     }
 }
 
