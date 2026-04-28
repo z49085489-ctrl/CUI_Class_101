@@ -47,5 +47,24 @@ namespace n14312101
         {
             new FormCalculator().Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            double c = Int32.Parse(textBox1.Text);
+            double f = c  *(1.8)+32;
+            baee.Text = f.ToString();
+
+
+        }
+
+        private void B_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

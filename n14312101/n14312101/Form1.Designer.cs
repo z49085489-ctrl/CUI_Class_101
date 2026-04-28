@@ -35,6 +35,13 @@
             this.lab_Counter = new System.Windows.Forms.Label();
             this.btn_Counter = new System.Windows.Forms.Button();
             this.btnCalculator = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.baee = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +61,7 @@
             this.btn_ClickMe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_ClickMe.Font = new System.Drawing.Font("標楷體", 15F);
             this.btn_ClickMe.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btn_ClickMe.Location = new System.Drawing.Point(40, 111);
+            this.btn_ClickMe.Location = new System.Drawing.Point(20, 90);
             this.btn_ClickMe.Name = "btn_ClickMe";
             this.btn_ClickMe.Size = new System.Drawing.Size(208, 55);
             this.btn_ClickMe.TabIndex = 1;
@@ -64,7 +71,7 @@
             // 
             // btn_ChangeLabel
             // 
-            this.btn_ChangeLabel.Location = new System.Drawing.Point(20, 192);
+            this.btn_ChangeLabel.Location = new System.Drawing.Point(0, 171);
             this.btn_ChangeLabel.Name = "btn_ChangeLabel";
             this.btn_ChangeLabel.Size = new System.Drawing.Size(117, 45);
             this.btn_ChangeLabel.TabIndex = 2;
@@ -75,7 +82,7 @@
             // lab_ChangeLabel
             // 
             this.lab_ChangeLabel.AutoSize = true;
-            this.lab_ChangeLabel.Location = new System.Drawing.Point(175, 208);
+            this.lab_ChangeLabel.Location = new System.Drawing.Point(155, 187);
             this.lab_ChangeLabel.Name = "lab_ChangeLabel";
             this.lab_ChangeLabel.Size = new System.Drawing.Size(33, 12);
             this.lab_ChangeLabel.TabIndex = 3;
@@ -85,7 +92,7 @@
             // lab_Counter
             // 
             this.lab_Counter.AutoSize = true;
-            this.lab_Counter.Location = new System.Drawing.Point(175, 286);
+            this.lab_Counter.Location = new System.Drawing.Point(155, 265);
             this.lab_Counter.Name = "lab_Counter";
             this.lab_Counter.Size = new System.Drawing.Size(11, 12);
             this.lab_Counter.TabIndex = 5;
@@ -93,7 +100,7 @@
             // 
             // btn_Counter
             // 
-            this.btn_Counter.Location = new System.Drawing.Point(20, 270);
+            this.btn_Counter.Location = new System.Drawing.Point(0, 249);
             this.btn_Counter.Name = "btn_Counter";
             this.btn_Counter.Size = new System.Drawing.Size(117, 45);
             this.btn_Counter.TabIndex = 4;
@@ -103,7 +110,7 @@
             // 
             // btnCalculator
             // 
-            this.btnCalculator.Location = new System.Drawing.Point(527, 308);
+            this.btnCalculator.Location = new System.Drawing.Point(418, 20);
             this.btnCalculator.Name = "btnCalculator";
             this.btnCalculator.Size = new System.Drawing.Size(247, 102);
             this.btnCalculator.TabIndex = 6;
@@ -111,11 +118,72 @@
             this.btnCalculator.UseVisualStyleBackColor = true;
             this.btnCalculator.Click += new System.EventHandler(this.btnCalculator_Click);
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(489, 220);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "攝氏(C):";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(489, 303);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "華氏(F):";
+            // 
+            // baee
+            // 
+            this.baee.AutoSize = true;
+            this.baee.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.baee.Location = new System.Drawing.Point(587, 303);
+            this.baee.Name = "baee";
+            this.baee.Size = new System.Drawing.Size(135, 20);
+            this.baee.TabIndex = 9;
+            this.baee.Text = "按下轉換按鈕";
+            this.baee.Click += new System.EventHandler(this.B_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox1.Location = new System.Drawing.Point(591, 217);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 31);
+            this.textBox1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(591, 255);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 29);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "轉換";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(839, 483);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.baee);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCalculator);
             this.Controls.Add(this.lab_Counter);
             this.Controls.Add(this.btn_Counter);
@@ -124,7 +192,8 @@
             this.Controls.Add(this.btn_ClickMe);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "l";
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +208,12 @@
         private System.Windows.Forms.Label lab_Counter;
         private System.Windows.Forms.Button btn_Counter;
         private System.Windows.Forms.Button btnCalculator;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label baee;
+        private System.Windows.Forms.Label label3;
     }
 }
 
