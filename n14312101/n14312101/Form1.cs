@@ -72,5 +72,10 @@ namespace n14312101
         {
             new FormTiner ().Show();
         }
+
+        private void btnOderManu_Click(object sender, EventArgs e)
+        {
+            new FormOder().Show();     
+          }
     }
 }

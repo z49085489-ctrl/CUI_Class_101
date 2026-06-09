@@ -42,6 +42,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnOderMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,7 +129,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(489, 220);
+            this.label2.Location = new System.Drawing.Point(294, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 7;
@@ -139,7 +140,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(489, 303);
+            this.label3.Location = new System.Drawing.Point(294, 304);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 8;
@@ -149,7 +150,7 @@
             // 
             this.baee.AutoSize = true;
             this.baee.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.baee.Location = new System.Drawing.Point(587, 303);
+            this.baee.Location = new System.Drawing.Point(392, 304);
             this.baee.Name = "baee";
             this.baee.Size = new System.Drawing.Size(135, 20);
             this.baee.TabIndex = 9;
@@ -159,7 +160,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(591, 217);
+            this.textBox1.Location = new System.Drawing.Point(396, 218);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 31);
             this.textBox1.TabIndex = 10;
@@ -167,7 +168,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("標楷體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(591, 255);
+            this.button1.Location = new System.Drawing.Point(396, 256);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 11;
@@ -177,7 +178,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(216, 320);
+            this.button2.Location = new System.Drawing.Point(21, 321);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(207, 80);
             this.button2.TabIndex = 12;
@@ -185,11 +186,24 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnOderMenu
+            // 
+            this.btnOderMenu.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnOderMenu.Location = new System.Drawing.Point(581, 349);
+            this.btnOderMenu.Name = "btnOderMenu";
+            this.btnOderMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnOderMenu.Size = new System.Drawing.Size(207, 80);
+            this.btnOderMenu.TabIndex = 13;
+            this.btnOderMenu.Text = "菜單";
+            this.btnOderMenu.UseVisualStyleBackColor = true;
+            this.btnOderMenu.Click += new System.EventHandler(this.btnOderManu_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 483);
+            this.Controls.Add(this.btnOderMenu);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -227,6 +241,7 @@
         private System.Windows.Forms.Label baee;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOderMenu;
     }
 }
 
