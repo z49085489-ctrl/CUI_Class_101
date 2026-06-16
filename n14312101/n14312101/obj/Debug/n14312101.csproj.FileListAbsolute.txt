@@ -10,3 +10,4 @@ C:\Users\MEGAS\Desktop\CUI_Class_101\n14312101\n14312101\obj\Debug\n14312101.exe
 C:\Users\MEGAS\Desktop\CUI_Class_101\n14312101\n14312101\obj\Debug\n14312101.pdb
 C:\Users\MEGAS\Desktop\CUI_Class_101\n14312101\n14312101\obj\Debug\n14312101.FormCalculator.resources
 C:\Users\MEGAS\Desktop\CUI_Class_101\n14312101\n14312101\obj\Debug\n14312101.FormTiner.resources
+C:\Users\MEGAS\Desktop\CUI_Class_101\n14312101\n14312101\obj\Debug\n14312101.FormOder.resources
