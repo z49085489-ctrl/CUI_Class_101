@@ -84,7 +84,7 @@ namespace n14312101
             }
           
 
-            File.AppendAllText("OrderData.csv", formattedDateTine+","+food+","+drink+","+dessert+"\n");
+            File.AppendAllText("OrderData.csv", formattedDateTine+","+food+","+sideFood+","+drink+","+dessert+"\n");
             MessageBox.Show("點餐完成");
         }
 
