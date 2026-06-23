@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 
 namespace n14312101
 {
@@ -16,54 +16,76 @@ namespace n14312101
         public FormOder()
         {
             InitializeComponent();
+            if (!File.Exists("OrderData.csv"))
+                File.WriteAllText("OrderData.csv", "時間,湯,肉,菜,海鮮\n", Encoding.UTF8);
         }
+
+        
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Control c in panel1.Controls)
+            DateTime currentDateTime = DateTime.Now;
+            string formattedDateTine = currentDateTime.ToString("yyyy/MM/dd HH:mm");
+
+            string food = "", sideFood = "", drink = "", dessert = "";
+
+            foreach (Control c in panel1.Controls)  //湯
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox temp = (CheckBox)c;  
+                    if (temp.Checked == true)
+                    {
+                        // MessageBox.Show(temp.Text);
+                        food+=" "+temp.Text;
+
+
+                    }
+                }
+            }
+            foreach (Control c in panel2.Controls)  //肉
             {
                 if (c is CheckBox)
                 {
                     CheckBox temp = (CheckBox)c;
                     if (temp.Checked == true)
                     {
-                        MessageBox.Show(temp.Text);
+                        //MessageBox.Show(temp.Text);
+                        sideFood+=" "+temp.Text;
                     }
                 }
             }
-            foreach (Control c in panel2.Controls)
+            foreach (Control c in panel3.Controls)  //菜
             {
                 if (c is CheckBox)
                 {
                     CheckBox temp = (CheckBox)c;
                     if (temp.Checked == true)
                     {
-                        MessageBox.Show(temp.Text);
+                        // MessageBox.Show(temp.Text);
+                        drink+=" "+temp.Text;
                     }
                 }
             }
-            foreach (Control c in panel3.Controls)
+            foreach (Control c in panel4.Controls)  //海鮮
             {
                 if (c is CheckBox)
                 {
                     CheckBox temp = (CheckBox)c;
                     if (temp.Checked == true)
                     {
-                        MessageBox.Show(temp.Text);
+                        // MessageBox.Show(temp.Text);
+                        dessert+=" "+temp.Text;
                     }
                 }
             }
-            foreach (Control c in panel4.Controls)
-            {
-                if (c is CheckBox)
-                {
-                    CheckBox temp = (CheckBox)c;
-                    if (temp.Checked == true)
-                    {
-                        MessageBox.Show(temp.Text);
-                    }
-                }
-            }
+          
+
+            File.AppendAllText("OrderData.csv", formattedDateTine+","+food+","+drink+","+dessert+"\n");
+            MessageBox.Show("點餐完成");
         }
 
 
